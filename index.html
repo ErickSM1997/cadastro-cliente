@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro-cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="centralizar-div">
+        <form action="formulario" class="formulario">
+            <div>
+                <h1>Cadastro de clientes</h1>
+            </div>
+            <div>
+                <label for="nome"> Nome Completo
+
+                </label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+            </div>
+            <div>
+                <label for="cep"> Digite seu CEP
+
+                </label>
+                <input type="text" id="cep" name="CEP" placeholder="Exemplo: 00000-000">
+            </div>
+            <div>
+                <label for="logradouro"> Logradouro
+
+                </label>
+                <input type="text" id="logradouro" name="Logradouro" placeholder="Digite seu endereço">
+            </div>
+            <div>
+                <label for="Bairro"> Bairro
+
+                </label>
+                <input type="text" id="bairro" name="Bairro" placeholder="Digite seu bairro">
+            </div>
+            <div class="linha">
+                <div class="campo-cidade">
+                    <label for="Cidade"> Cidade
+
+                    </label>
+                    <input type="text" id="cidade" name="Cidade" placeholder="Digite sua cidade">
+                </div>
+                <div class="campo-uf">
+                    <label for="uf"> UF
+
+                    </label>
+                    <select id="UF" name="UF" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre (AC)</option>
+                        <option value="AL">Alagoas (AL)</option>
+                        <option value="AP">Amapá (AP)</option>
+                        <option value="AM">Amazonas (AM)</option>
+                        <option value="BA">Bahia (BA)</option>
+                        <option value="CE">Ceará (CE)</option>
+                        <option value="DF">Distrito Federal (DF)</option>
+                        <option value="ES">Espírito Santo (ES)</option>
+                        <option value="GO">Goiás (GO)</option>
+                        <option value="MA">Maranhão (MA)</option>
+                        <option value="MT">Mato Grosso (MT)</option>
+                        <option value="MS">Mato Grosso do Sul (MS)</option>
+                        <option value="MG">Minas Gerais (MG)</option>
+                        <option value="PA">Pará (PA)</option>
+                        <option value="PB">Paraíba (PB)</option>
+                        <option value="PR">Paraná (PR)</option>
+                        <option value="PE">Pernambuco (PE)</option>
+                        <option value="PI">Piauí (PI)</option>
+                        <option value="RJ">Rio de Janeiro (RJ)</option>
+                        <option value="RN">Rio Grande do Norte (RN)</option>
+                        <option value="RS">Rio Grande do Sul (RS)</option>
+                        <option value="RO">Rondônia (RO)</option>
+                        <option value="RR">Roraima (RR)</option>
+                        <option value="SC">Santa Catarina (SC)</option>
+                        <option value="SP">São Paulo (SP)</option>
+                        <option value="SE">Sergipe (SE)</option>
+                        <option value="TO">Tocantins (TO)</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="email">Seu melhor email
+
+                </label>
+                <input type="text" id="email" name="email" placeholder="Digite seu melhor email">
+            </div>
+            <div>
+                <label for="celular">Celular
+
+                </label>
+                <input type="text" id="celular" name="celular" placeholder="Exemplo: (99)9 9999-9999">
+            </div>
+            <button>Salvar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
