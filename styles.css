@@ -1,6 +1,10 @@
 body {
     margin: 0px;
-
+    font-family: Arial, sans-serif;
+    /* Fonte moderna e limpa */
+    font-size: 16px;
+    /* Tamanho base confortável para leitura */
+    color: #333;
 }
 
 .centralizar-div {
@@ -78,7 +82,65 @@ select {
 .linha select {
     width: 110%;
 }
-
+/* Estiliza somente a h1 do formulário */
 .formulario h1 {
     text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.centraliza-botao {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+
+}
+
+/* Estilo geral para todos os botões */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Suaviza a transição de cor quando passar o mouse */
+}
+
+/* Estilo quando o mouse passa por cima do botão */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para botões desabilitados */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    /* Cursor indicando que o botão está desabilitado */
+}
+
+/* Estilo específico para o botão de limpar */
+button#limpar {
+    background-color: #f44336;
+}
+
+/* Hover para o botão de limpar */
+button#limpar:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilo para o botão da base de cadastros */
+button#base {
+    background-color: #2196F3;
+}
+
+/* Hover para o botão da base de cadastros */
+button#base:hover {
+    background-color: #1976D2;
 }
