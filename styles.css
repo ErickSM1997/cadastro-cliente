@@ -144,3 +144,15 @@ button#base {
 button#base:hover {
     background-color: #1976D2;
 }
+
+.centralizar-tabela {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+table {
+    border: solid black;
+    display: none;
+}

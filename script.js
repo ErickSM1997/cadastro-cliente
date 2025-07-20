@@ -15,6 +15,22 @@ document.getElementById("cadastrar").addEventListener("click", function (event) 
     let email = document.getElementById("email").value;
     let celular = document.getElementById("celular").value;
 
+    // Validação do CEP: deve ter no máximo 8 dígitos
+    if (cep.length !== 8) {
+        alert("O campo CEP deve conter 8 dígitos.");
+        return; // Para a execução do cadastro
+    }
+
+    // Validação do celular: deve ter no máximo 11 dígitos
+    if (celular.length > 11) {
+        alert("O campo Celular deve ter 11 dígitos.");
+        return;
+    }
+    else if (celular.length < 11) {
+        alert("O campo Celular deve ter 11 dígitos.");
+        return;
+    }
+
 
     // Criação do objeto cliente
     let cliente = {
@@ -34,21 +50,61 @@ document.getElementById("cadastrar").addEventListener("click", function (event) 
     // Mostra a confirmação de cadastro concluído
     console.log("Cliente cadastrado com sucesso:");
     console.log(cliente);
+    alert("Cliente cadastrado com sucesso")
 
     // Limpa o formulário
     document.querySelector("form").reset();
 
 });
 
-// Retornando a lista de clientes cadastrados ao apertar o botão "base de cadastros"
+// Função que atualiza a tabela com os clientes cadastrados
 document.getElementById("base").addEventListener("click", function () {
+    const tabela = document.getElementById("tabelaClientes");
+    const corpoTabela = document.querySelector("#tabelaClientes tbody");
+
     if (listaClientes.length === 0) {
-        console.log("Nenhum cliente cadastrado ainda.");
+        alert("Nenhum cliente cadastrado ainda.");
+        tabela.style.display = "none";
     } else {
-        console.log("Lista de clientes cadastrados:");
+        // Limpa a tabela antes de preencher
+        corpoTabela.innerHTML = "";
+
+        // Percorre a lista de clientes cadastrados
         for (let i = 0; i < listaClientes.length; i++) {
-            console.log(`Cliente ${i + 1}:`);
-            console.log(listaClientes[i]);
+            const cliente = listaClientes[i];
+
+            // Cria uma nova linha na tabela
+            let linha = document.createElement("tr");
+
+            // Preenche as colunas da linha com os dados do cliente
+            linha.innerHTML =
+                "<td>" + cliente.nome + "</td>" +
+                "<td>" + cliente.cep + "</td>" +
+                "<td>" + cliente.logradouro + "</td>" +
+                "<td>" + cliente.bairro + "</td>" +
+                "<td>" + cliente.cidade + "</td>" +
+                "<td>" + cliente.uf + "</td>" +
+                "<td>" + cliente.email + "</td>" +
+                "<td>" + cliente.celular + "</td>";
+
+            // Adiciona a linha ao corpo da tabela
+            corpoTabela.appendChild(linha);
         }
+        // Mostra a tabela
+        tabela.style.display = "table";
     }
+
 });
+
+// // Retornando a lista de clientes cadastrados ao apertar o botão "base de cadastros"
+// document.getElementById("base").addEventListener("click", function () {
+//     if (listaClientes.length === 0) {
+//         console.log("Nenhum cliente cadastrado ainda.");
+//     } else {
+//         console.log("Lista de clientes cadastrados:");
+//         for (let i = 0; i < listaClientes.length; i++) {
+//             console.log(`Cliente ${i + 1}:`);
+//             console.log(listaClientes[i]);
+//         }
+//     }
+// });
